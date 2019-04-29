@@ -17,5 +17,13 @@ public class AnimalsTest {
         assertEquals(true, Animals.all().get(0).equals(firstAnimal));
         assertEquals(true, Animals.all().get(1).equals(secondAnimal));
     }
-}
 
+    @Test
+        public void find_returnsAnimalWithSameId_secondPerson() {
+        Animals firstAnimal = new Animals("leopard", "sick",1,5);
+        firstAnimal.save();
+        Animals secondAnimal = new Animals("leopard", "sick",1,5);
+        secondAnimal.save();
+        assertEquals(Animals.find(secondAnimal.getId()), secondAnimal);
+    }
+}
