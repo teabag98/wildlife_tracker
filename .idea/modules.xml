@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/wildlife_tracker.iml" filepath="$PROJECT_DIR$/.idea/wildlife_tracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wildlife_tracker.main.iml" filepath="$PROJECT_DIR$/.idea/modules/wildlife_tracker.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wildlife_tracker.test.iml" filepath="$PROJECT_DIR$/.idea/modules/wildlife_tracker.test.iml" />
     </modules>
   </component>
 </project>
