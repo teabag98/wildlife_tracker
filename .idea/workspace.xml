@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../CaesarCipher" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../HairSalon" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../Heroes" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../friendLetter" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../friendLetter2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../java-to-do" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../leapYear" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../toDO" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../virtual-pets" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../ping-pong" value="PREVIEW" />
+        <entry key="$USER_HOME$/java-project" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="249" />
+    <option name="y" value="34" />
+    <option name="width" value="1025" />
+    <option name="height" value="734" />
+  </component>
+</project>
