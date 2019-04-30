@@ -35,7 +35,9 @@ public class EndangeredAnimal extends Animals {
     public static List<EndangeredAnimal> all() {
         String sql = "SELECT * FROM animals WHERE endangered = 'true'";
         try (Connection con = DB.sql2o.open()) {
-            return con.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(EndangeredAnimal.class);
+            return con.createQuery(sql)
+                    .throwOnMappingFailure(false)
+                    .executeAndFetch(EndangeredAnimal.class);
         }
     }
 
@@ -56,7 +58,8 @@ public class EndangeredAnimal extends Animals {
         super.save(); // calls the parent constructor with no arguments
         try (Connection con = DB.sql2o.open()) {
             String sql = "UPDATE animals SET health=:health, age=:age WHERE id=:id";
-            con.createQuery(sql).addParameter("health", this.health).addParameter("age", this.age).addParameter("id", this.id)
+            con.createQuery(sql).addParameter("health", this.health).addParameter("age", this.age)
+                    .addParameter("id", this.id)
                     .executeUpdate();
         }
     }
@@ -64,7 +67,8 @@ public class EndangeredAnimal extends Animals {
     public static EndangeredAnimal findAnimalByName(String name) {
         try (Connection con = DB.sql2o.open()) {
             String sql = "SELECT * FROM animals where name=:name";
-            EndangeredAnimal animal = con.createQuery(sql).addParameter("name", name).throwOnMappingFailure(false)
+            EndangeredAnimal animal = con.createQuery(sql).addParameter("name", name)
+                    .throwOnMappingFailure(false)
                     .executeAndFetchFirst(EndangeredAnimal.class);
             return animal;
         }
