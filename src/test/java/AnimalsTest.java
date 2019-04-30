@@ -26,4 +26,11 @@ public class AnimalsTest {
         secondAnimal.save();
         assertEquals(Animals.find(secondAnimal.getId()), secondAnimal);
     }
+
+    @Test
+    public void save_addsAnimalToDatabase_true(){
+        Animals newAnimal = new Animals("leopard", "sick",1,5);
+                newAnimal.save();
+                assertEquals(newAnimal.getName(), "leopard");
+    }
 }

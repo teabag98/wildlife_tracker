@@ -1,106 +1,73 @@
-import org.sql2o.*;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
+import org.sql2o.*;
 
-public class EndangeredAnimal {
-    public String name;
-    public int id;
-    public boolean endangered;
-    private String health;
+public class EndangeredAnimal extends Animals {
+
     private String age;
+    private String health;
 
-    public EndangeredAnimal(String name, String health, String age) {
-        this.name = name;
+    public static final String HEALTH_HEALTHY = "healthy";
+    public static final String HEALTH_ILL = "ill";
+    public static final String HEALTH_OK = "okay";
+
+    public static final String AGE_NEW = "newborn";
+    public static final String AGE_YOUNG = "young";
+    public static final String AGE_ADULT = "adult";
+
+    public EndangeredAnimal (String name, String health,int id, String age){
+
         this.id = id;
-        this.health = health;
         this.age = age;
+        this.name = name;
+        this.health = health;
+
+    }
+
+    public String getAge() {
+       return age;
     }
 
     public String getHealth() {
         return health;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    @Override
-    public boolean equals(Object otherEndangeredAnimal) {
-        if(!(otherEndangeredAnimal instanceof EndangeredAnimal)) {
-            return false;
-        } else {
-            EndangeredAnimal newEndangeredAnimal = (EndangeredAnimal) otherEndangeredAnimal;
-            return this.getName().equals(newEndangeredAnimal.getName()) && this.getHealth().equals(newEndangeredAnimal.getHealth()) && this.getAge().equals(newEndangeredAnimal.getAge());
-        }
-    }
-
-    public void save() {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO endangered_animals (name, health, age) VALUES (:name, :health, :age);";
-            this.id = (int) con.createQuery(sql, true)
-                    .addParameter("name", this.name)
-                    .addParameter("health", this.health)
-                    .addParameter("age", this.age)
-                    .executeUpdate()
-                    .getKey();
-        }
-    }
-
     public static List<EndangeredAnimal> all() {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM endangered_animals;";
-            return con.createQuery(sql)
-                    .executeAndFetch(EndangeredAnimal.class);
+        String sql = "SELECT * FROM animals WHERE endangered = 'true'";
+        try (Connection con = DB.sql2o.open()) {
+            return con.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(EndangeredAnimal.class);
         }
     }
 
     public static EndangeredAnimal find(int id) {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM endangered_animals WHERE id=:id;";
-            EndangeredAnimal endangeredanimal = con.createQuery(sql)
-                    .addParameter("id", id)
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM animals where id=:id";
+            EndangeredAnimal animal = con.createQuery(sql).addParameter("id", id).throwOnMappingFailure(false)
                     .executeAndFetchFirst(EndangeredAnimal.class);
-            return endangeredanimal;
+            if (animal == null) {
+                throw new IndexOutOfBoundsException("Sorry, this animal cannot be found.");
+            }
+            return animal;
         }
     }
 
-    public void updateHealth(String health) {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "UPDATE endangered_animals SET health=:health WHERE id=:id;";
-            con.createQuery(sql)
-                    .addParameter("id", id)
-                    .addParameter("health", health)
+    @Override
+    public void save() {
+        super.save(); // calls the parent constructor with no arguments
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "UPDATE animals SET health=:health, age=:age WHERE id=:id";
+            con.createQuery(sql).addParameter("health", this.health).addParameter("age", this.age).addParameter("id", this.id)
                     .executeUpdate();
         }
     }
 
-    public void updateAge(String age) {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "UPDATE endangered_animals SET age=:age WHERE id=:id;";
-            con.createQuery(sql)
-                    .addParameter("age", age)
-                    .addParameter("id", id)
-                    .executeUpdate();
+    public static EndangeredAnimal findAnimalByName(String name) {
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM animals where name=:name";
+            EndangeredAnimal animal = con.createQuery(sql).addParameter("name", name).throwOnMappingFailure(false)
+                    .executeAndFetchFirst(EndangeredAnimal.class);
+            return animal;
         }
     }
-
-    public List<Sightings> getSightings() {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM sightings WHERE animal_id=:id;";
-            List<Sightings> sightings = con.createQuery(sql)
-                    .addParameter("id", id)
-                    .executeAndFetch(Sightings.class);
-            return sightings;
-        }
-    }
-
 
 }

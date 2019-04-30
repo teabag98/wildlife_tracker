@@ -2,6 +2,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import org.sql2o.*;
 
+
 public class SightingsTest {
   @Rule
     public DatabaseRule database = new DatabaseRule();
@@ -62,7 +63,7 @@ public class SightingsTest {
 
     @Test
     public void find_returnsNullWhenNoAnimalFound_null() {
-        assertTrue(Animals.find(999) == null);
+        assertTrue(Animals.find(500) == null);
     }
 
 }
