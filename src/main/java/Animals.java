@@ -50,7 +50,7 @@ public  class Animals {
     }
 
     public static List<Animals> all() {
-        String sql = "select * from animal";
+        String sql = "select * from animals";
         try(Connection con = DB.sql2o.open()) {
             return con.createQuery(sql)
                     .throwOnMappingFailure(false)
@@ -60,7 +60,7 @@ public  class Animals {
 
 
     public static String find(int id) {
-        String sql = "select animal from animal where id = :id;";
+        String sql = "select animal from animals where id = :id;";
         try(Connection con = DB.sql2o.open()) {
             String name = con.createQuery(sql)
                     .addParameter("id", id)
@@ -70,7 +70,7 @@ public  class Animals {
     }
 
     public static String getAnimalEndangered(int id) {
-        String sql = "select endangered from animal where id = :id;";
+        String sql = "select endangered from animals where id = :id;";
         try(Connection con = DB.sql2o.open()) {
             String endangered = con.createQuery(sql)
                     .addParameter("id", id)
@@ -80,7 +80,7 @@ public  class Animals {
     }
 
     public static String getAnimalHealth(int id) {
-        String sql = "select health from animal where id = :id;";
+        String sql = "select health from animals where id = :id;";
         try(Connection con = DB.sql2o.open()) {
             String health = con.createQuery(sql)
                     .addParameter("id", id)
@@ -90,14 +90,20 @@ public  class Animals {
     }
 
     public static String getAnimalAge(int id) {
-        String sql = "select age from animal where id = :id;";
+        String sql = "select age from animals where id = :id;";
         try(Connection con = DB.sql2o.open()) {
-            String age = con.createQuery(sql)
+            String age;
+            age = con.createQuery(sql)
                     .addParameter("id", id)
                     .executeScalar(String.class);
             return age;
         }
     }
+
+
+
+
+
 
 }
 
