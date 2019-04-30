@@ -253,7 +253,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SightingsTest">
+  <component name="RunManager" selected="JUnit.SightingsTest.find_returnsNullWhenNoAnimalFound_null">
     <configuration name="wildlife_tracker [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -282,8 +282,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SightingsTest.find_returnsNullWhenNoAnimalFound_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wildlife_tracker.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SightingsTest" />
+      <option name="METHOD_NAME" value="find_returnsNullWhenNoAnimalFound_null" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SightingsTest.find_returnsNullWhenNoAnimalFound_null" />
         <item itemvalue="JUnit.SightingsTest" />
         <item itemvalue="Gradle.wildlife_tracker [dependencies]" />
       </list>

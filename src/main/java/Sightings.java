@@ -10,12 +10,11 @@ public class Sightings {
     private  String rangername;
     private  int id;
     private int animalid;
-    public String timeseen;
 
-    public Sightings(String location, String rangername, int animalid,String timeseen){
+
+    public Sightings(String location, String rangername, int animalid){
         this.location = location;
         this.rangername = rangername;
-        this.timeseen=timeseen;
         this.animalid=animalid;
 
     }
@@ -54,7 +53,6 @@ public class Sightings {
                         .addParameter("animalid", this.animalid)
                         .addParameter("location", this.location)
                         .addParameter("rangername", this.rangername)
-                        .addParameter("timeseen",this.timeseen)
                         .throwOnMappingFailure(false)
                         .executeUpdate()
                         .getKey();

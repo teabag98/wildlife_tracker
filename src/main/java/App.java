@@ -42,9 +42,10 @@ public class App {
             String location = request.queryParams("location");
             String health = request.queryParams("health");
             String age = request.queryParams("age");
+
             Animals newAnimal = new Animals(animal, endangered, health, age);
             newAnimal.save();
-            Sightings newSighting = new Sightings(location ,rangername, age,Animals.);
+            Sightings newSighting = new Sightings(location ,rangername, age,newAnimal.getId());
             newSighting.save();
             model.put("sightings", Sightings.all());
             model.put("animals",Animals.all());
