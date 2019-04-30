@@ -6,17 +6,12 @@ public class SightingsTest {
   @Rule
     public DatabaseRule database = new DatabaseRule();
 
-  @Test
-    public void sighting_instantiateorrectly_true(){
-      Sightings testMonster = new Sightings("Bubbles", "ali",2,3,23/04/19);
-      assertEquals(true, testMonster instanceof Sightings);
-  }
 
     @Test
     public void sighting_instantiatesCorrectly_true() {
         Animals testAnimal = new Animals("Deer");
         testAnimal.save();
-        Sightings testSighting = new Sightings(testAnimal.getId(), "45.472428, -121.946466", "Ranger Avery");
+        Sightings testSighting = new Sightings(testAnimal.getId(),"ricman",1,1,5/6/7,);
         assertEquals(true, testSighting instanceof Sightings);
     }
 
@@ -44,12 +39,12 @@ public class SightingsTest {
         testAnimal.save();
         Sightings testSighting = new Sightings (testAnimal.getId(), "45.472428, -121.946466", "Ranger Avery");
         testSighting.save();
-        Animal secondTestAnimal = new Animal("Badger");
+        Animals secondTestAnimal = new Animals("Badger");
         secondTestAnimal.save();
-        Sighting secondTestSighting = new Sighting (testAnimal.getId(), "45.472428, -121.946466", "Ranger Reese");
+        Sightings secondTestSighting = new Sightings (testAnimal.getId(), "45.472428, -121.946466", "Ranger Reese");
         secondTestSighting.save();
-        assertEquals(true, Sighting.all().get(0).equals(testSighting));
-        assertEquals(true, Sighting.all().get(1).equals(secondTestSighting));
+        assertEquals(true, Sightings.all().get(0).equals(testSighting));
+        assertEquals(true, Sightings.all().get(1).equals(secondTestSighting));
     }
 
     @Test

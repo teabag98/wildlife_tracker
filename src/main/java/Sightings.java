@@ -51,32 +51,33 @@ public class Sightings {
 
         public void save() {
             try(Connection con = DB.sql2o.open()) {
-                String sql = "INSERT INTO sightings (animal_id, location, ranger_name) VALUES (:animal_id, :location, :ranger_name);";
+                String sql = "INSERT INTO sightings (animalid, location, rangername,timeseen) VALUES (:animalid, :location, :rangername, :timeseen);";
                 this.id = (int) con.createQuery(sql, true)
-                        .addParameter("animal_id", this.animal_id)
+                        .addParameter("animalid", this.animalid)
                         .addParameter("location", this.location)
-                        .addParameter("ranger_name", this.ranger_name)
+                        .addParameter("rangername", this.rangername)
+                        .addParameter("timeseen",this.timeseen)
                         .throwOnMappingFailure(false)
                         .executeUpdate()
                         .getKey();
             }
         }
 
-        public static List<Sighting> all() {
+        public static List<Sightings> all() {
             try(Connection con = DB.sql2o.open()) {
                 String sql = "SELECT * FROM sightings;";
                 return con.createQuery(sql)
                         .throwOnMappingFailure(false)
-                        .executeAndFetch(Sighting.class);
+                        .executeAndFetch(Sightings.class);
             }
         }
 
-        public static Sighting find(int id) {
+        public static Sightings find(int id) {
             try(Connection con = DB.sql2o.open()) {
                 String sql = "SELECT * FROM sightings WHERE id=:id;";
-                Sighting sighting = con.createQuery(sql)
+                Sightings sighting = con.createQuery(sql)
                         .addParameter("id", id)
-                        .executeAndFetchFirst(Sighting.class);
+                        .executeAndFetchFirst(Sightings.class);
                 return sighting;
             } catch (IndexOutOfBoundsException exception) {
                 return null;
