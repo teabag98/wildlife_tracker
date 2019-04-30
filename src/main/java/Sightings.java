@@ -1,4 +1,5 @@
 import org.sql2o.*;
+import java.sql.Timestamp;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,21 +10,18 @@ public class Sightings {
     private  String rangername;
     private  int id;
     private int animalid;
-    public double timeseen;
+    public String timeseen;
 
-    public Sightings(String location, String rangername,int id,int animalid,double timeseen){
+    public Sightings(String location, String rangername, int animalid,String timeseen){
         this.location = location;
         this.rangername = rangername;
-        this.id =id;
         this.timeseen=timeseen;
         this.animalid=animalid;
 
     }
 
 
-
-
-        public int getId() {
+    public int getId() {
             return id;
         }
 

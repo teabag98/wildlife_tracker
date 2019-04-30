@@ -10,9 +10,9 @@ public class AnimalsTest {
 
     @Test
     public void all_returnsAllInstancesOfPerson_true() {
-        Animals firstAnimal = new Animals("leopard", "sick",1,5);
+        Animals firstAnimal = new Animals("lion","not","healthy","2");
         firstAnimal.save();
-        Animals secondAnimal = new Animals("leopard", "sick",2,5);
+        Animals secondAnimal = new Animals("lion","not","healthy","2");
         secondAnimal.save();
         assertEquals(true, Animals.all().get(0).equals(firstAnimal));
         assertEquals(true, Animals.all().get(1).equals(secondAnimal));
@@ -20,9 +20,9 @@ public class AnimalsTest {
 
     @Test
         public void find_returnsAnimalWithSameId_secondPerson() {
-        Animals firstAnimal = new Animals("leopard", "sick",1,5);
+        Animals firstAnimal = new Animals("lion","not","healthy","2");
         firstAnimal.save();
-        Animals secondAnimal = new Animals("leopard", "sick",1,5);
+        Animals secondAnimal = new Animals("lion","not","healthy","2");
         secondAnimal.save();
         assertEquals(Animals.find(secondAnimal.getId()), secondAnimal);
     }
