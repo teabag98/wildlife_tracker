@@ -1,4 +1,9 @@
-import static spark.Spark.port;
+import spark.ModelAndView;
+import spark.template.velocity.VelocityTemplateEngine;
+import java.util.HashMap;
+import java.util.Map;
+
+import static spark.Spark.*;
 
 public class App {
 
@@ -13,6 +18,14 @@ public class App {
         }
         port(port);
 
+        staticFileLocation("/public");
+        String layout = "templates/layout.vtl";
+
+        get("/", (request, respond) ->{
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("template", "templates/index.vtl");
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
 
 
     }
