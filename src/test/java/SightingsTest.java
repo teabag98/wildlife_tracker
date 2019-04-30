@@ -22,7 +22,7 @@ public class SightingsTest {
 
     @Test
     public void equals_returnsTrueIfLocationAndDescriptionAreSame_true() {
-        Animals testAnimal = new Animals("Deer");
+        Animals testAnimal = new Animals("Deer","okay",1,5);
         testAnimal.save();
         Sightings testSighting = new Sightings(testAnimal.getId(), "45.472428, -121.946466", "Ranger Avery");
         Sightings anotherSighting = new Sightings(testAnimal.getId(), "45.472428, -121.946466", "Ranger Avery");

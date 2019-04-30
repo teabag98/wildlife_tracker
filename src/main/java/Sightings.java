@@ -28,7 +28,7 @@ public class Sightings {
         }
 
         public int getAnimalId() {
-            return animal_id;
+            return animalid;
         }
 
         public String getLocation() {
@@ -36,15 +36,15 @@ public class Sightings {
         }
 
         public String getRangerName() {
-            return ranger_name;
+            return rangername;
         }
 
         @Override
         public boolean equals(Object otherSighting) {
-            if(!(otherSighting instanceof Sighting)) {
+            if(!(otherSighting instanceof Sightings)) {
                 return false;
             } else {
-                Sighting newSighting = (Sighting) otherSighting;
+                Sightings newSighting = (Sightings) otherSighting;
                 return this.getAnimalId() == (newSighting.getAnimalId()) && this.getLocation().equals(newSighting.getLocation()) && this.getRangerName().equals(newSighting.getRangerName());
             }
         }
