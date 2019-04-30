@@ -16,24 +16,23 @@ public  class Animals {
         this.age = age;
     }
 
+    public String getEndangered(){
+        return endangered;
+    }
 
-    public int getId() {
+    public String getAnimal(){
+        return animal;
+    }
+    public String getHealth(){
+        return health;
+    }
+    public String age(){
+        return age;
+    }
+    public int getId(){
         return id;
     }
 
-
-    public String getName() {
-        return name;
-    }
-
-//    public Animals (String name, String health,int id, int age){
-//
-//        this.id = id;
-//        this.age = age;
-//        this.name = name;
-//        this.health = health;
-//
-//    }
 
     public void save() {
 
