@@ -66,12 +66,12 @@ public class Animal extends Animals {
         }
     }
 
-    public List<Sighting> getSightings() {
+    public List<Sightings> getSightings() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "SELECT * FROM sightings WHERE animal_id=:id;";
-            List<Sighting> sightings = con.createQuery(sql)
+            List<Sightings> sightings = con.createQuery(sql)
                     .addParameter("id", id)
-                    .executeAndFetch(Sighting.class);
+                    .executeAndFetch(Sightings.class);
             return sightings;
         }
     }
