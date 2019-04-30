@@ -44,7 +44,7 @@ public class App {
             String age = request.queryParams("age");
             Animals newAnimal = new Animals(animal, endangered, health, age);
             newAnimal.save();
-            Sightings newSighting = new Sightings(location ,rangername, age);
+            Sightings newSighting = new Sightings(location ,rangername, age,Animals.);
             newSighting.save();
             model.put("sightings", Sightings.all());
             model.put("animals",Animals.all());

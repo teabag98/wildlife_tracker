@@ -59,7 +59,7 @@ public  class Animals {
     }
 
 
-    public static String getAnimalName(int id) {
+    public static String find(int id) {
         String sql = "select animal from animal where id = :id;";
         try(Connection con = DB.sql2o.open()) {
             String name = con.createQuery(sql)
