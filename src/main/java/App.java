@@ -1,10 +1,9 @@
 import java.util.Map;
 import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
+
 
 public class App {
     public static void main(String[] args) {
@@ -26,7 +25,7 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("animals", Animal.all());
             model.put("endangeredAnimals", Endangered.all());
-            model.put("sightings", Sighting.all());
+            model.put("sightings", Sightings.all());
             model.put("template", "templates/index.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
@@ -105,7 +104,7 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             Animal animal = Animal.find(Integer.parseInt(request.params("id")));
             model.put("animal", animal);
-            model.put("template", "templates/animal.vtl");
+            model.put("template", "templates/animals.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 

@@ -1,116 +1,20 @@
-<h1 id="header">WILDLIFE TRACKER</h1>
-<hr>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-            <h1 class="top">SIGHTING</h1>
-            <form action="/details" method="post">
-                <div class="form-group">
-                    <label>Game Ranger</label>
-                    <input type="text" id="ranger" name="ranger" class="form-control" placeholder="Ranger Name">
-                </div>
-                <div class="form-group">
-                    <label>Type of animal</label>
-                    <input type="text" id="animal" name="animal" class="form-control" placeholder="Animal spotted">
-                </div>
-                <div class="form-group">
-                    <label>Endangered?</label>
-                    <br>
-                    <label>
-                        <input type="radio" value="Yes" name="endangered" id="endangered">
-                        <span for="yes">Yes</span>
-                    </label>
-                    <br>
-                    <label>
-                        <input type="radio" value="No" name="endangered" id="endangered">
-                        <span for="no">No</span>
-                    </label>
-                </div>
-                <label>Location:</label>
-                <br>
-                <select name="location">
-                    <option label="">Choose location</option>
-                    <div id="location">
-                    <option value="Zone A">Zone A</option>
-                    <option value="Zone B">Zone B</option>
-                    <option value="Zone C">Zone C</option>
-                    <option value="Zone D">Zone D</option>
-                    </div>
-                </select>
-                <br>
-                <br>
-                <label>Animal's Health:</label><br>
-                <select name="health">
-                    <option label="">--Condition--</option>
-                    <option value="Ill">Ill</option>
-                    <option value="Healthy">Healthy</option>
-                    <option value="Okay">Okay</option>
-                </select>
-                <br>
-                <br>
-                <div class="form-group">
-                    <label>Age</label>
-                    <br>
-                    <select name="age">
-                        <option label="">choose age-set</option>
-                        <option value="Newborn">Newborn</option>
-                        <option value="Young">Young</option>
-                        <option value="Adult">Adult</option>
-                    </select>
-                </div>
-                <br>
-                <br>
-                <button class="btn btn-primary" type="submit">Add sighting
-                    <span class="glyphicon glyphicon-plus"></span></button>
-            </form>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-6">
-        <h1 class="top">DETAILS</h1>
-            <div class="bd bd-gray-300 rounded table-responsive">
-                <table class="table mg-b-0">
-                    <thead>
-                        <tr>
-                            <th>Ranger:</th>
-                            <th>Animal:</th>
-                            <th>Endangered:</th>
-                            <th>Location:</th>
-                            <th>Health:</th>
-                            <th>Age:</th>
-                            <th>Date_sighted:</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        #foreach($sighting in $sightings)
-                        <tr>
-                            <td>$sighting.getRanger()</td>
-                            #if($AnimalClass.getAnimalName($sighting.getAnimalId()))
-                                <td>$AnimalClass.getAnimalName($sighting.getAnimalId())</td>
-                                    #else
-                                        <td></td>
-                                        #end
-                            #if($AnimalClass.getAnimalEndangered($sighting.getAnimalId()))
-                                <td>$AnimalClass.getAnimalEndangered($sighting.getAnimalId())</td>
-                                    #else
-                                         <td></td>
-                                         #end
-                            <td>$sighting.getLocation()</td>
-                            #if($AnimalClass.getAnimalHealth($sighting.getAnimalId()))
-                                <td>$AnimalClass.getAnimalHealth($sighting.getAnimalId())</td>
-                                    #else
-                                        <td></td>
-                                        #end
-                            #if($AnimalClass.getAnimalAge($sighting.getAnimalId()))
-                                <td>$AnimalClass.getAnimalAge($sighting.getAnimalId())</td>
-                                    #else
-                                        <td></td>
-                                        #end
-                            <td>$sighting.getDate_sighted()</td>
-                        </tr>
-                        #end
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+<div class = "card">
+<h1>$animal.getName()</h1>
+<h4>Animal ID: $animal.getId()</h4>
+
+#if($animal.getSightings().size() == 0)
+  <p>Click here to report a sighting <a href="/sightings">Sightings</a>.</p>
+#else
+  #foreach($sighting in $animal.getSightings())
+  <br>
+  <br>
+    Location: <strong>$sighting.getLocation()</strong>
+    <br>
+    <br>
+    Reported by: <strong>$sighting.getRangerName()</strong>
+    <br>
+    <br>
+    Ranger budge number: <strong>$sighting.getId()</strong>
+  #end
+#end
 </div>
