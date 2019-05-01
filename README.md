@@ -13,7 +13,7 @@ WIldlife tracker application enables ranger to record sightations  of animals , 
 * Go to the projects [repository](https://github.com/teabag98/wildlifeTracker)
 * Clone the project
 ```
-git clone https://github.com/teabag98/hairSalon.git
+git clone https://github.com/teabag98/wildlife_tracker.git
 ```
 
 * sdk install gradle 4.8.1
@@ -38,12 +38,15 @@ CREATE TABLE animals (id serial PRIMARY KEY, name varchar);
 ```
 
 ## contact
-[email me](eric.kingoo2014@gmail.com)
+[contact author](eric.kingoo2014@gmail.com)
 ## Technologies used:
+```
 * Java
+```
 * spark
-*postgresql
+```
+* postgresql
 
 
 ## Licence
-*MIT licence
+* MIT licence
