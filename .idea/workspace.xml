@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8d68c95-a13a-432f-a3bf-b59865bf8281" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/success.vtl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/animals.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/animals.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/index.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/index.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Endangered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Endangered.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Sightings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Sightings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/EndangeredSpecies.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/endangeredSpecies.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sightings.vtl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sightings.vtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AnimalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AnimalsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -65,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#740#756#0" expanded="true" />
@@ -90,34 +75,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="-440">
               <caret line="5" column="119" selection-start-line="5" selection-start-column="119" selection-end-line="5" selection-end-column="119" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/endangeredSpecies.vtl">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <state relative-caret-position="164">
+              <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Animal.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#114#115#0" expanded="true" />
-                <element signature="e#146#147#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="47" selection-start-column="47" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -126,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.vtl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -156,7 +136,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/sightings.vtl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1110">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
@@ -165,7 +145,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Endangered.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-142">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,7 +171,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/DB.java" />
         <option value="$PROJECT_DIR$/src/test/java/DB/DatabaseRule.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/EndangeredSpecies.java" />
         <option value="$PROJECT_DIR$/src/main/java/AnimalsInterface.java" />
         <option value="$PROJECT_DIR$/src/test/java/DatabaseRule.java" />
@@ -213,10 +192,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/EndangeredSpecies.vtl" />
         <option value="$PROJECT_DIR$/src/main/java/Sightings.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="646" />
     <option name="y" value="27" />
     <option name="width" value="710" />
@@ -541,22 +522,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/animal_form.vtl">
       <provider selected="true" editor-type-id="text-editor">
@@ -594,7 +565,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.vtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -608,14 +579,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/sightings.vtl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Endangered.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-142">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -635,7 +606,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#740#756#0" expanded="true" />
@@ -659,8 +630,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="-440">
           <caret line="5" column="119" selection-start-line="5" selection-start-column="119" selection-end-line="5" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="47" selection-start-column="47" selection-end-column="47" />
         </state>
       </provider>
     </entry>
