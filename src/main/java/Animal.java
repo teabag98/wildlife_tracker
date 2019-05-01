@@ -5,8 +5,8 @@ public class Animal extends Animals {
 
     public Animal(String name) {
         this.name = name;
-        this.id = id;
     }
+
 
     @Override
     public boolean equals(Object otherAnimal) {

@@ -74,7 +74,7 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("animals", Animal.all());
             model.put("endangeredAnimals", Endangered.all());
-            model.put("template", "templates/animal-form.vtl");
+            model.put("template", "templates/animal_form.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
@@ -112,7 +112,7 @@ public class App {
             Map<String, Object> model = new HashMap<String, Object>();
             Endangered endangeredAnimal = Endangered.find(Integer.parseInt(request.params("id")));
             model.put("endangeredAnimal", endangeredAnimal);
-            model.put("template", "templates/endangered-animal.vtl");
+            model.put("template", "templates/endangeredSpecies.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
